@@ -1,0 +1,704 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital@1&family=Cinzel:wght@600&family=Concert+One&family=Inconsolata:wght@200;300;600&family=Lobster+Two&family=Passion+One&family=Philosopher:wght@700&family=Roboto+Slab:wght@500;700;900&family=Tilt+Prism&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+    --a-color: #0ef;
+    --b-color: #fff;
+}
+
+.dark-theme {
+    --bg-color: white;
+    --second-bg-color: rgb(240, 238, 238);
+    --text-color: black;
+    --main-color: red;
+    --a-color: rgb(60, 21, 21);
+    --b-color: rgb(60, 21, 21);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    color: var(--main-color);
+    font-size: 45px;
+}
+
+.side {
+    background-color: var(--second-bg-color);
+    width: 17%;
+    height: 100%;
+    transition: transform 0.3s ease-in;
+    position: fixed;
+    z-index: 2;
+}
+
+.home svg {
+    cursor: pointer;
+    margin-top: 20%;
+    margin-left: 36%;
+    width: 65px;
+    height: 65px;
+    border: 3px solid var(--text-color);
+    padding: 14px;
+    border-radius: 35px;
+    box-shadow: 0 0 .5rem var(--a-color);
+    color: var(--text-color);
+}
+
+.home svg:hover {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+}
+
+.home p {
+    font-size: 30px;
+    margin-left: 34%;
+}
+
+.icon svg {
+    width: 40px;
+    height: 40px;
+    padding: 7px;
+    border: 1px solid var(--text-color);
+    border-radius: 15px;
+    color: var(--text-color);
+    margin: 15% 5% 5% 5%;
+    text-align: center;
+    margin-left: 10%;
+}
+
+.icon svg:hover {
+    background-color: var(--main-color);
+}
+
+.side nav {
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.side nav li {
+    list-style: none;
+    padding: 20px;
+}
+
+.side nav li a {
+    font-size: 25px;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 7%;
+    color: var(--text-color);
+    transition: .3s;
+}
+
+.side nav li a:hover {
+    color: var(--main-color);
+}
+
+.sidego {
+    transform: translate(-100%, 0);
+    position: fixed;
+}
+
+.hamburger {
+    cursor: pointer;
+    top: 50px;
+    right: 35px;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    border: 3px solid var(--text-color);
+    padding-top: 3px;
+    padding-right: 3px;
+    padding-left: 3px;
+    border-radius: 30px;
+    box-shadow: 0 0 .4rem var(--b-color);
+}
+
+.hamburger:hover {
+    background-color: var(--main-color);
+}
+
+.mode {
+    cursor: pointer;
+    top: 130px;
+    right: 35px;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--text-color);
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 0 0 .4rem var(--b-color);
+}
+
+.mode:hover {
+    background-color: var(--main-color);
+}
+
+.arrow {
+    cursor: pointer;
+    bottom: 20px;
+    right: 35px;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--text-color);
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 0 0 .4rem var(--b-color);
+}
+
+.arrow svg {
+    color: var(--text-color);
+}
+
+.arrow:hover {
+    background-color: var(--main-color);
+}
+
+.profile {
+    display: flex;
+    font-size: 50px;
+    padding-left: 40px;
+    padding-top: 25px;
+    text-align: center;
+    text-shadow: .5rem .5rem 1rem var(--a-color);
+}
+
+.profile span {
+    color: var(--main-color);
+}
+
+.container {
+    display: flex;
+}
+
+.infoContainer {
+    margin: 100px 0 0 400px;
+    display: flex;
+    width: 90%;
+}
+
+.devinfo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hello {
+    font-size: 45px;
+}
+
+.name {
+    font-size: 65px;
+}
+
+.ce {
+    font-size: 37px;
+}
+
+.devinfo span {
+    color: var(--main-color);
+}
+
+.devpic img {
+    height: 55vh;
+    margin-left: 100px;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2.4rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.about-hobbies {
+    padding-top: 30%;
+    margin-left: 310px;
+}
+
+.about {
+    width: 70vw;
+    font-size: 25px;
+}
+
+.H {
+    display: flex;
+    margin-top: 10%;
+}
+
+.slider {
+    margin-left: 5%;
+    width: 1100px;
+    height: 230px;
+    margin-top: 20px;
+    background-image: url(https://www.springboard.com/blog/wp-content/uploads/2022/08/programming-skills.png);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 1rem var(--b-color);
+    animation: slider 10s infinite linear;
+}
+
+.hobbies {
+    margin-left: 200px;
+    width: 130vw;
+    margin-top: 10px;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hobbies ul li {
+    list-style-type: none;
+    margin-bottom: 3px;
+}
+
+.Education {
+    margin-left: 310px;
+    font-size: 25px;
+}
+
+.E {
+    padding-top: 100px;
+    margin-top: 200px;
+}
+
+.data-E {
+    border-left: 2px solid var(--main-color);
+    padding: 19px;
+}
+
+.certificate {
+    margin-left: 310px;
+    margin-right: 72px;
+    font-size: 23px;
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+.certi {
+    padding-top: 100px;
+    margin-top: 20px;
+} 
+
+.card {
+    position: absolute;
+    display: flex;
+}
+.c {
+    margin: 0 0 0 150px;
+    width: 300px;
+    height: 300px;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 .5rem var(--text-color);
+}
+
+.c img {
+   width: 100%;
+   height: 100%;
+}
+
+.c img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.project {
+    margin-left: 280px;
+    margin-top: 170px;
+    font-size: 23px;
+    padding-top: 100px;
+    overflow: hidden;
+    padding-left: 30px;
+}
+
+.project h1 {
+    margin-bottom: 4rem;
+    padding-top: 20px;
+    margin-top: 100px;
+}
+
+.project-container {
+    width: 1300px;
+    height: 220px;
+    display: inline-flex;
+    gap: 50px;
+}
+
+.project-container .project-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 2rem var(--second-bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.project-box img {
+    width: 100%;
+    transition: .5s ease;
+} 
+
+.project-box:hover img {
+    transform: scale(1.1);
+}
+
+.project-box .project-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.project-box:hover .project-layer {
+   transform: translateY(0);
+}
+
+.project-layer h4 {
+    font-size: 27px;
+}
+
+.A {
+    background: var(--text-color);
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    padding: 5px;
+}
+
+.project-layer svg {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--second-bg-color);
+    width: 3rem;
+    height: 3rem;
+    padding-top: 13px;
+}
+
+.project-layer svg:hover {
+    color: var(--main-color);
+}
+
+.contact-main {
+    margin-left: 290px;
+    width: 1215px;
+}
+
+.con {
+    padding-top: 100px;
+    margin-top: 200px;
+    font-size: 23px;
+}
+
+.contact {
+    display: flex;
+}
+
+.mycontact {
+    border: 1px solid var(--text-color);
+    border-radius: 15px;
+    margin: 25px 25px 25px 25px;
+}
+
+.mycontact ul {
+    margin: 65px 50px 215px 100px;
+    list-style-type: none;
+}
+
+.mycontact ul li {
+    padding-top: 30px;
+    font-size: 28px;
+}
+
+.mycontact ul p {
+    font-size: 20px;
+}
+
+.mycontact ul li svg {
+    border-radius: 35px;
+    width: 50px;
+    height: 50px;
+    margin-left: -70px;
+    border: 1px solid var(--text-color);
+    padding: 10px;
+    position: absolute;
+}
+
+.form {
+    border: 1px solid var(--text-color);
+    border-radius: 15px;
+    margin: 25px 0 0 40px;
+    width: 560px;
+    height: 110%;
+}
+
+.udetail {
+    position: absolute;
+    margin: 25px 0 0 40px;
+}
+
+.udetail div {
+    padding: 10px;
+    font-size: 23px;
+}
+
+.udetail a {
+    display: flex;
+}
+
+.form input {
+    background-color: var(--second-bg-color);
+}
+
+.button {
+    padding-left: 200px;
+    padding-top: 540px;
+    margin-left: 40px;
+    margin-bottom: 23px;
+} 
+
+.button input {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 23px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.button input:hover {
+    background-color: var(--main-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    font-size: 23px;
+    background-color: rgb(14, 13, 13);
+    color: aliceblue;
+    margin-top: 40px;
+    /* width: 1894px; */
+}
+
+
+
+
+@media only screen and (max-width: 1441px) {
+    .project {
+        overflow: scroll;
+        width: 1400px;
+    }
+
+    .footer {
+        width: 1730px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .about {
+        width: 100vw;
+    }
+
+    .H {
+        width: 100vw;
+    }
+
+    .slider {
+        width: 100vw;
+    }
+
+    .hobbies {
+        margin-left: 100px;
+        width: 100vw;
+    }
+
+    .c {
+        margin: 0 0 0 150px;
+    }
+
+    .mycontact {
+        margin: 25px 25px 25px 25px;
+    }
+
+    .form {
+        margin-left: 0;
+    }
+
+    .footer {
+        width: 1680px;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+
+    .about-hobbies {
+        margin-left: 240px;
+    }
+
+    .about {
+        width: 130vw;
+    }
+
+    .slider {
+        width: 250vw;
+    }
+
+    .hobbies {
+        width: 200vw;
+    }
+
+    .Education {
+        width: 100vw;
+    }
+
+    .project {
+        width: 1100px;
+        margin-left: 275px;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+
+    .side {
+        width: 30%;
+    }
+
+    .infoContainer {
+        display: block;
+        margin: 100px 100px 0 200px;
+    }
+
+    .devinfo {
+        margin-bottom: 100px;
+    }
+
+    .about-hobbies {
+        margin-left: 120px;
+    }
+
+    .about {
+        width: 140vw;
+    }
+
+    .H {
+        display: contents;
+    }
+
+    .slider {
+        width: 80vw;
+        margin-top: 80px;
+        margin-left: 300px;
+    }
+
+    .hobbies {
+        margin-left: 0;
+        margin-top: 70px;
+        width: 100vw;
+    }
+
+    .Education {
+        width: 190vw;
+        margin-left: 120px;
+    }
+
+    .certificate {
+        margin-left: 120px;
+        width: 100vw;
+    }
+
+    .c {
+        margin: 0 0 0 60px;
+    }
+
+    .project {
+        width: 680px;
+        margin-left: 110px;
+    }
+
+    .contact-main {
+        margin-left: 120px;
+        width: 700px;
+    }
+
+    .contact {
+        display: contents;
+    }
+
+    .mycontact {
+        width: 600px;
+        height: 500px;
+    }
+
+    .form{
+        width: 600px;
+        margin-left: 28px;
+    }
+    
+    .footer {
+        width: 940px;
+    }
+    
+}
+
+@media only screen and (max-width: 321px) {
+    .about {
+        width: 184vw;
+    }
+
+    .slider {
+        width: 110vw;
+    }
+
+    .hobbies {
+        width: 140vw;
+    }
+
+    .Education {
+        width: 210vw;
+    }
+
+    .certificate {
+        margin-left: 100px;
+    }
+
+    .c {
+        margin: 0 0 0 30px;
+    }
+
+}
